@@ -81,7 +81,15 @@
                             Project #{{ $project->id }}
                         </div>
                         <div class="card-img-top mt-2">
-                            <img class="img-fluid rounded-2" src="https://picsum.photos/200/200?random={{ $project->id }}">
+
+                            @if (str_contains($project->cover_image, 'placeholders.'))
+                                <img width="100" src="{{ asset($project->cover_image) }}" alt="">
+                            @else
+                                <img class="img-fluid rounded-2"
+                                    src="https://picsum.photos/200/200?random={{ $project->id }}">
+                            @endif
+
+
                         </div>
                         <div class="card-body">
                             <div class="card-title fw-bold">
