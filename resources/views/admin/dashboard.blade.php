@@ -80,13 +80,13 @@
                         <div class="card-header bg-secondary text-black">
                             Project #{{ $project->id }}
                         </div>
+
                         <div class="card-img-top mt-2">
 
-                            @if (str_contains($project->cover_image, 'placeholders.'))
+                            @if (str_contains($project->cover_image, 'http'))
                                 <img width="100" src="{{ asset($project->cover_image) }}" alt="">
                             @else
-                                <img class="img-fluid rounded-2"
-                                    src="https://picsum.photos/200/200?random={{ $project->id }}">
+                                <img width="100" src="{{ asset('storage/' . $project->cover_image) }}" alt="">
                             @endif
 
 

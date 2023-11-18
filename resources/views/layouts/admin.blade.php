@@ -88,6 +88,12 @@
                             </li>
 
                             <li class="nav-item">
+                                <a class="nav-link text-white" href="http://localhost:5173/">
+                                    <i class="fa-solid fa-chalkboard-user fa-lg fa-fw"></i> To Guest's View
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
 
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.dashboard') }}">
