@@ -11,7 +11,9 @@ class ProjectController extends Controller
     public function index()
     {
         /* $projects = Project::orderByDesc('id')->paginate(5); */
-        $projects = Project::all();
+        /* $projects = Project::all(); */
+        $projects = Project::with('type', 'technologies')->orderByDesc('id')->paginate(5);
+
 
         return response()->json([
             'status' => 'success',
