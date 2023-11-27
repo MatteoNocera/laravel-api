@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LeadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Project;
@@ -33,3 +34,5 @@ Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('projects/{project:slug}', [ProjectController::class, 'show']);
 
 Route::get('/latests', [ProjectController::class, 'latests']);
+
+Route::post('/contacts', [LeadController::class, 'store']);
