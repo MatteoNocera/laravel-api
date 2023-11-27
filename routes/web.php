@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\ProfileController;
+use App\Mail\NewMail;
+use App\Models\Lead;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +42,11 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name("admin.")->group(
     Route::resource('/technologies', TechnologyController::class)->parameters(['technologies' => 'technology:slug']);
 });
 
+Route::get('/mailable', function () {
+    $lead = Lead::find(1);
+
+    return new NewMail($lead);
+});
 
 
 
