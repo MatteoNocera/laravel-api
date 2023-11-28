@@ -7,7 +7,7 @@
             <i class="fa-solid fa-arrow-left"></i> Back to Projects List
         </a>
 
-        <h2 class="my-5 display-3 fw-bold text-muted">Your project n° : #{{ $project->id }}
+        <h2 class="my-5 display-3 fw-bold text-muted">Title : {{ $project->title }}
         </h2>
 
         <div class="row py-4">
