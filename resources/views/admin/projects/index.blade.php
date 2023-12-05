@@ -11,6 +11,8 @@
             <h2 class="my-5 display-3 fw-bold text-muted">My Projects</h1>
 
                 <div class="d-flex align-items-center gap-2">
+                    <a class="btn btn-outline-dark " href="{{ route('admin.gitHub.fetch') }}"><i
+                            class="fa-brands fa-github"></i> Fetch project </a>
                     <a class="btn btn-outline-primary " href="{{ route('admin.projects.create') }}">➕ Add project</a>
                     <a class="btn btn-outline-danger " href="{{ route('admin.trashed') }}">🗑 See Trashed
                         Projects</a>
